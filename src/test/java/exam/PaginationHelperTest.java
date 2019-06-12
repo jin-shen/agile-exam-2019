@@ -34,6 +34,10 @@ public class PaginationHelperTest {
 
     @Test
     public void ShouldGetPageIndex() {
+        Assert.assertEquals(1, helper.pageIndex(5));
+        Assert.assertEquals(0, helper.pageIndex(2));
+        Assert.assertEquals(-1, helper.pageIndex(20));
+        Assert.assertEquals(-1, helper.pageIndex(-10));
         /**
          *  TODO：请使用Assert语句描述以下测试
          * helper.pageIndex(5); //should == 1 (zero based index)
@@ -41,6 +45,8 @@ public class PaginationHelperTest {
          * helper.pageIndex(20); //should == -1
          * helper.pageIndex(-10); //should == -1
          */
+
     }
+
 
 }
